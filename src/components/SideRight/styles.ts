@@ -8,4 +8,5 @@ export const Container = styled.div`
     padding: 1.5rem;
 
     border-radius: 2rem;
+
 `;
