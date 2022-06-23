@@ -14,8 +14,12 @@ const AppProvider = (({ children }: PokemonsProps) => {
     const [next, setNext] = useState<string>('');
     const [previous, setPrevious] = useState<string>('');
 
+    const [offset, setOffset] = useState<number>(0);
+    const [limit, setLimit] = useState<number>(0);
+
+// corrigir o código para sincronizar automaticamente a quantidade de Pokemons da API
     useEffect(() => {
-        api.get("/pokemon")
+        api.get("/pokemon/?offset=0&limit=1126")
             .then((response) => {
                 setResults(response.data.results);
                 setCount(response.data.count);

@@ -3,7 +3,8 @@ import { api } from "../../services/api";
 import { useContext, useEffect, useState } from "react";
 import { PokemonsNumber } from "../PokemonsNumber";
 import { SelectPokemon } from "../SelectPokemon";
-import AppContext from "../../AppContext/Context"; 
+import AppContext from "../../AppContext/Context";
+import { Square } from "../Square";
 
 export function SideRight() {
 
@@ -17,9 +18,9 @@ export function SideRight() {
     return (
         <Container>
             <h3>Atualmente são  <PokemonsNumber count={pokemonCount} /> Pokemons</h3>
-
             <SelectPokemon />
-
         </Container>
+
+        
     );
 }
